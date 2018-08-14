@@ -117,3 +117,19 @@
 #     print(i)
 # print(list(temp))
 
+# a = '8*8'
+# print(eval(a))
+# 反射:通过字符串的模式导入模块。
+
+
+# '''
+# temp = 'sys'
+# model = __import__(temp)
+# print(model.path)
+# '''
+
+# 大型网站，用于切换数据库连接
+temp = 'mysqlserver'
+func = 'count'
+model = __import__(temp)
+Function = getattr(model, func)
