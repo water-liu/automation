@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # _*_coding:utf-8_*_
 
+
 # from file import demo
 #
 # print('index', __name__)
@@ -56,4 +57,63 @@
 #
 #
 # show2(name='liu', age='23', job='it')
+
+# print(range(10))
+
+# def foo():
+#     yield 1
+#     yield 2
+#     yield 3
+#
+#
+# re = foo()
+# for item in re:
+#     print(item)
+
+
+# def readlines():
+#     seek = 0
+#     while True:
+#         with open('D:/tem.txt', 'r', encoding='utf-8') as f:
+#             f.seek(seek)
+#             data = f.readline()
+#             if data:
+#                 seek = f.tell()
+#                 yield data
+#             else:
+#                 return
+#
+#
+# for item in readlines():
+#     print(item)
+
+#
+# result = 'gt' if 1 > 3 else 'lt'
+# print(result)
+
+# a = []
+# # print(help(a))
+# print(type(a))
+
+# t1 = 123
+# t2 = 124
+# print(id(t1))
+# print(id(t2))
+#
+# print(max([11, 22, 33, 44, 666]))
+# print(sum([11, 22, 33, 44, 666]))
+# print(pow(2, 11))
+
+# print(chr(65))
+# print(ord('A'))
+
+# s = 'i am {0},you are {1}'
+# print(s.format('23', 'ds'))
+# site = {'name': 'aa', 'url': 'wwww'}
+# print('网站名称：{name}, 地址: {url}'.format(**site))
+
+# temp = map(lambda x, y: x+y, [1, 2, 3, 4, 5], [2, 4, 6, 8, 10])
+# for i in temp:
+#     print(i)
+# print(list(temp))
 
