@@ -129,7 +129,83 @@
 # '''
 
 # 大型网站，用于切换数据库连接
-temp = 'mysqlserver'
-func = 'count'
-model = __import__(temp)
-Function = getattr(model, func)
+# temp = 'mysqlserver'
+# func = 'count'
+# model = __import__(temp)
+# Function = getattr(model, func)
+
+# import random
+
+
+# print(random.randint(1, 10))
+# # 大于等于1，小于等于10
+#
+# print(random.randrange(1, 10))
+# # 大于等于1， 小于10
+#
+# print(chr(random.randint(65, 90)))
+
+# # 生产验证码
+# code = []
+# for i in range(6):
+#     if i == random.randint(1, 9):
+#         # print(random.randint(1, 9))
+#         code.append(str(random.randint(1, 9)))
+#     else:
+#         temp = random.randint(65, 90)
+#         # print(chr(temp))
+#         code.append(chr(temp))
+# print(''.join(code))
+# # 转为字符串
+
+# import hashlib
+#
+# hash = hashlib.md5('admin')
+
+# import pickle
+# python与Python之间数据传输序列化
+
+# li = ['alex', 22, 11, 'ok']
+# print(pickle.dumps(li))
+# print(type(pickle.dumps(li)))
+
+# f = open('D:/text.txt', 'wb')
+# f.write(pickle.dumps(li))
+# f.close()
+#
+# f1 = open('D:/text.txt', 'rb')
+# data = pickle.loads(f1.read())
+# print(data)
+
+# f2 = open('D:/text2.txt', 'wb')
+# pickle.dump(li, f2)
+#
+# f2 = open('D:/text2.txt', 'rb')
+# red = pickle.load(f2)
+# print(red)
+
+
+# import re
+
+
+# result1 = re.match('\d+', '123akdjf2345')
+# print(result1)
+# result2 = re.search('\d+', 'adfc234ds235')
+# print(result2)
+# print(result2.group())
+# result3 = re.findall('\d+', 'asdfj234lakjdf334')
+# print(result3)
+# com = re.compile('\d+')
+# print(com.findall('adsf234adsf567'))
+
+# result2 = re.search('(\d+)[a-z]*(\d+)', 'akdlsjfa234adskfj45553')
+# print(result2.group())
+# print(result2.groups())
+
+
+# import time
+#
+#
+# print(time.time())
+# print(time.gmtime())
+# print(time.strftime('%Y-%m-%d %H:%M:%S'))
