@@ -20,9 +20,6 @@ def login(username, passwd):
         return 3
 
 
-# 取现
-def withdrawal():
-    pass
 
 
 # 转账

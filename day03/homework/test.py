@@ -5,6 +5,9 @@
 @file: test.py
 @time: 2018/08/{DAY}
 """
+import os
+import time
+import pickle
 
 
 dict1 = {
@@ -15,6 +18,20 @@ dict1 = {
     '5': '商城',
     '6': '退出',
 }
+datetime = time.time()
+dict2 = {
+    1: {'name': 'Alice', '消费类型': '商城', '消费金额': 300, '手续费': 0, '消费时间': time.strftime('%Y-%m-%d %H:%M:%S')}
+}
 
-print(dict1['1'])
+
+f = open('record.txt', 'ab')
+pickle.dump(dict1, f)
+pickle.dump(dict2, f)
+f.close()
+
+# f1 = open('record.txt', 'rb')
+print(pickle.loads('record.txt'))
+# print(pickle.load(f1))
+
+
 
