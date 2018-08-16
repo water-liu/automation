@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # _*_coding:utf-8_*_
+import repayment
 
 
 # 登录
@@ -19,19 +20,8 @@ def login(username, passwd):
         return 3
 
 
-
-# 还款
-def repayment():
-    pass
-
-
 # 取现
 def withdrawal():
-    pass
-
-
-# 查询
-def query():
     pass
 
 
@@ -56,7 +46,7 @@ dict_home = {
     '3': '查询',
     '4': '转账',
     '5': '商城',
-    '6': '退出',
+    '6': '退出'
 }
 
 
@@ -67,7 +57,6 @@ def main():
         username = input('please input your username:')
         passwd = input('please input your password:')
         if login(username, passwd) == 1:
-            print(string_home)
             break
         elif login(username, passwd) == 2:
             print("密码输入错误")
@@ -76,12 +65,24 @@ def main():
         else:
             print('系统有误，请重新登录')
     while True:
+        print(string_home)
         choose = input('请选择你需要的业务，输入对应的序号即可：')
         if choose in dict_home.keys():
-            dict_home[choose]
+            if int(choose) == 1:
+                withdrawal()
+            elif int(choose) == 2:
+                repayment.operation(username)
+            elif int(choose) == 3:
+                pass
+            elif int(choose) == 4:
+                pass
+            elif int(choose) == 5:
+                pass
+            elif int(choose) == 6:
+                pass
+                break
         else:
             print('您的选择不正确，请再次选择')
-
 
 
 if __name__ == '__main__':
