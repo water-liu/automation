@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # _*_coding:utf-8_*_
 import repayment
+import withdrawal
+import recordoperation
 
 
 # 登录
@@ -18,8 +20,6 @@ def login(username, passwd):
             return 2
     else:
         return 3
-
-
 
 
 # 转账
@@ -66,11 +66,13 @@ def main():
         choose = input('请选择你需要的业务，输入对应的序号即可：')
         if choose in dict_home.keys():
             if int(choose) == 1:
-                withdrawal()
+                withdrawal.maincrash(username)
             elif int(choose) == 2:
                 repayment.operation(username)
             elif int(choose) == 3:
-                pass
+                list1 = recordoperation.read_record(username)
+                print("你查询的账单如下：")
+                print(list1)
             elif int(choose) == 4:
                 pass
             elif int(choose) == 5:
@@ -87,3 +89,5 @@ if __name__ == '__main__':
 
 # 思路: 交易记录写入文件，可以用pickle序列化，用ID区别不同的人 ， 后面用字典存记录
 # 额度，由列表从文件中读取，退出登录时，需要把列表再写入文件，下次登录时读取。
+
+
