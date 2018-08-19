@@ -38,14 +38,15 @@ dict1 = {
 # print(type(test))
 
 
-f1 = open('credit.txt', 'r')
-while True:
-    listname = f1.readline().split(',')
-    print(type(listname))
-    print(listname)
-    print(listname[0])
-    if listname[0] == 'Alice':
-        print('True')
-    break
-f1.close()
+f = open('credit.txt', 'w')
+
+# while True:
+#     listname = f1.readline().split(',')
+#     print(type(listname))
+#     print(listname)
+#     print(listname[0])
+#     if listname[0] == 'Alice':
+#         print('True')
+#     break
+# f1.close()
 # print(listname)
