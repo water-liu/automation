@@ -128,7 +128,8 @@ try:
     if res:
         print('登录成功')
     else:
-        raise
-except e:
+        raise IndentationError
+except IndexError:
     print('cuowu')
     print('denglushibei')
+
