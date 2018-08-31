@@ -3,7 +3,7 @@
 
 # request = 'gt' if 1 < 3 else 'lt'
 # print(request)
-import pymysql
+# import pymysql
 
 # cursor = connection.cursor()
 # sql1 = "insert into userinfo(id,name) values(%s, %s)"
@@ -49,4 +49,34 @@ import pymysql
 connection = pymysql.connect(host='192.168.1.207', user='liuy', password='liuy123', db='08day5')
 
 # Django里面事务就是放在装饰器里面
+# cursor = connection.cursor()
+# cursor.execute('select * from admin')
+# data = cursor.fetchone()
+# print(data)
+# data1 = cursor.fetchone()
+# print(data1)
+# data2 = cursor.fetchone()
+# print(data2)
+# cursor.scroll(-1, mode='relative')
+# data3 = cursor.fetchone()
+# print(data3)
+# cursor.scroll(5, mode='absolute')
+# data4 = cursor.fetchone()
+# print(data4)
+# # 输出绝对位置的数据
+# # cursor.scroll(0, mode='absolute')
+# # 输出相对上一条位置移动后的数据
+# # cursor.scroll(-1, mode='relative')
+# connection.close()
+# cursor = connection.cursor()
+# sql = "insert into admin(name, address) values(%s, %s)"
+# params = ('dd', 'gansu3')
+# cursor.execute(sql, params)
+# connection.commit()
+# last_id = cursor.lastrowid
+# new_id = connection.insert_id()
+# print(last_id)
+# print(new_id)
+#
+# connection.close()
 
