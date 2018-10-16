@@ -3,6 +3,7 @@
 import pymysql
 from day5 import conf
 
+
 class MySqlHelper:
 
     def __init__(self):
